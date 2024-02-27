@@ -1,0 +1,13 @@
+﻿@model LR6_ASP6.Model.User
+
+@if (ViewBag.QuantityForm)
+{
+    <form asp-action="Order" method="post">
+        @for (int i = 0; i < ViewBag.User.Age; i++)
+        {
+            <label>Quantity for Product @(i + 1):</label>
+            <input type="number" name="products[@i].Quantity" />
+        }
+        <button type="submit">Order</button>
+    </form>
+}

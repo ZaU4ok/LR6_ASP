@@ -1,0 +1,9 @@
+﻿@model List<LR6_ASP6.Model.Product>
+
+<h2>Ordered Products:</h2>
+<ul>
+    @foreach (var product in ViewBag.Products)
+    {
+        <li>@product.Name - @product.Quantity units</li>
+    }
+</ul>
